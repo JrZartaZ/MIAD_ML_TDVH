@@ -83,7 +83,7 @@ resource_fields = api.model('Resource', {
 })
 
 # Cargar el modelo previamente entrenado
-model = joblib.load('/spotify_popularity_model.pkl')
+model = joblib.load('spotify_popularity_model.pkl')
 
 # Definir la clase del endpoint
 @ns.route('/')
