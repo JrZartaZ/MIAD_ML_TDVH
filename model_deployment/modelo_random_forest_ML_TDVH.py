@@ -11,7 +11,7 @@ import sys
 import os
 
 # Cargar el modelo desde el archivo .pkl
-model = joblib.load('model_deployment/spotify_popularity_model.pkl')
+model = joblib.load('/spotify_popularity_model.pkl')
 
 # Definir la función predict_popularity
 def predict_popularity(features_dict):
