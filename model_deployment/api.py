@@ -44,7 +44,7 @@ Pasando los siguientes parámetros numéricos en la URL:
 ### ✨ Ejemplo de uso
 
 ```bash
-http://localhost:5000/predict/?danceability=0.8&energy=0.7&loudness=-5.0&speechiness=0.05&acousticness=0.1&instrumentalness=0.0&liveness=0.2&valence=0.6&tempo=120.0&duration_ms=210000
+http://18.189.189.9:5000/predict/?danceability=0.8&energy=0.7&loudness=-5.0&speechiness=0.05&acousticness=0.1&instrumentalness=0.0&liveness=0.2&valence=0.6&tempo=120.0&duration_ms=210000
 """
 
 
