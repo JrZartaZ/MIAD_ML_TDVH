@@ -39,6 +39,10 @@ def split_lemmas_no_stopwords(text):
     ]
     return lemmas
 
+import __main__
+__main__.split_lemmas_no_stopwords = split_lemmas_no_stopwords
+
+
 # Cargar archivos
 vectorizer = joblib.load('model_deployment/tfidf_vectorizer.pkl')
 model = joblib.load('model_deployment/movie_genre_classifier.pkl')
