@@ -35,7 +35,7 @@ def split_lemmas_no_stopwords(text):
     text = text.lower()
     tokens = tokenizer.tokenize(text)  # ← NO USA punkt
     filtered_tokens = [word for word in tokens if word.isalpha()]
-    pos_tagged = nltk.pos_tag(filtered_tokens)
+    pos_tagged = nltk.pos_tag(filtered_tokens, lang='eng')
     lemmas = [
         lemmatizer.lemmatize(word, get_wordnet_pos(tag))
         for word, tag in pos_tagged if word not in stop_words
