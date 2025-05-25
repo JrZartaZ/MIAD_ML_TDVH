@@ -6,6 +6,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 import pandas as pd
+from nltk.tokenize import RegexpTokenizer
+tokenizer = RegexpTokenizer(r'\w+')
+
 
 # Preprocesamiento (descargas)
 nltk.download('punkt')
@@ -30,7 +33,7 @@ def get_wordnet_pos(treebank_tag):
 
 def split_lemmas_no_stopwords(text):
     text = text.lower()
-    tokens = nltk.word_tokenize(text)
+    tokens = tokenizer.tokenize(text)  # ← NO USA punkt
     filtered_tokens = [word for word in tokens if word.isalpha()]
     pos_tagged = nltk.pos_tag(filtered_tokens)
     lemmas = [
