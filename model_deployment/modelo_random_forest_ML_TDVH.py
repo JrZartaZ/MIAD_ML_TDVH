@@ -35,4 +35,3 @@ def predict_popularity(features_dict):
     prediction = model.predict(input_df)[0]
 
     return round(prediction, 2)
-
